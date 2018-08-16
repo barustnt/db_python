@@ -1,0 +1,30 @@
+{
+from mysql.connector import MySQLConnection, Error
+import mysql.connector
+
+cnx = mysql.connector.connect(user='root', password='naruto2009',
+                              host='127.0.0.1',
+                              database='cerist')
+
+Query = "SELECT * FROM tv;"
+
+try:
+
+    cursor = cnx.cursor()
+    cursor.execute(Query)
+
+    row = cursor.fetchone()
+
+    while row is not None:
+        print(row)
+        row = cursor.fetchone()
+
+except Error as e:
+    print(e)
+
+finally:
+    cursor.close()
+    cnx.close()
+
+## code python yamchi tres bien cnx entre base de donnes et python
+}

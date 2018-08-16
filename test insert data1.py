@@ -39,6 +39,6 @@ Query = ("SELECT tv_sound FROM tv WHERE   tv.id=2;")
 tchek=QueryReq(Query,conn) [0]
 tchek= int (tchek)
 print("the curnet value wich saved in the data base is ",+ tchek)
-# print(resultat2)
+
 conn.close()
 

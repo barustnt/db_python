@@ -1,0 +1,32 @@
+UPDATE tv
+SET id =1,
+SET tv_name="LG",
+SET tv_sound=0,
+SET tv_timer=0
+
+{
+CREATE TABLE clime (
+id INT PRIMARY KEY  ,
+clime_name VARCHAR(20),
+clime_mode VARCHAR(20),
+clime_temp INT
+ 
+ );
+
+DESCRIBE tv  ;
+SELECT * FROM tv;
+INSERT INTO clime VALUES ( 2, 'CONDOR' , 'cold' , 16 );
+DELETE FROM tv 
+WHERE id=10;
+## this programe works verry good
+}
+ {
+ CREATE TABLE remote_tv (
+remote_id int PRIMARY KEY ,
+remote_name VARCHAR (20),
+tv_id int ,
+FOREIGN KEY (tv_id) REFERENCES tv (id) ON DELETE SET NULL
+
+);
+## contient the program how to insert  a FOREIGN KEY
+}
